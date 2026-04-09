@@ -11,53 +11,77 @@ if problema == 1:
     # Problema 1: Área de un círculo con radio 15.
     # Fórmula: Area = 3.1416 * r^2
     r = 15
-    # Tu código aquí
+    Area = (3.1416 * r**2)
+    print(Area)
 
 elif problema == 2:
     # Problema 2: Genera una clave de producto (concatenar) con código y lote.
     # Resultado esperado: "prod-88-loteb" (todo en minúsculas).
     codigo = 88
     lote = "LoteB"
-    # Tu código aquí
+    clave = f"prod-{codigo}-{lote}".lower()
+    print(clave)
+
 
 elif problema == 3:
     # Problema 3: Verifica si el carácter '@' está en el correo dado.
     email = "usuario.upa.edu.mx"
-    # Tu código aquí
+    if "@" in email:
+        print("El caracter existe") 
+    else:
+        print("El caracter no exsite ")
 
+    
 elif problema == 4:
     # Problema 4: Convierte todo el texto a MAYÚSCULAS.
     aviso = "el examen termina pronto"
-    # Tu código aquí
+    aviso_mayusculas = aviso.upper()
+    print(aviso_mayusculas)
 
 elif problema == 5:
     # Problema 5: Convierte el string "150.50" a float y luego a entero.
     # Imprime ambos resultados en una sola línea.
     dato = "150.50"
-    # Tu código aquí
+    numero_float = float(dato)   # convierte a número real (decimal)
+    numero_int = int(numero_float)  # convierte a entero (trunca decimales)
+
+    print("Float:", numero_float, "Entero:", numero_int)
+    
+    
 
 elif problema == 6:
     # Problema 6: Conversión de Temperatura (Celsius a Fahrenheit).
     # C=30. Fórmula: F = (C * 1.8) + 32
-    celsius = 30
-    # Tu código aquí
+    c = 30
+    F = (c * 1.8) + 32
+    print ("La temperatura en fahrenheit es:", F)
 
 elif problema == 7:
     # Problema 7: Extrae los primeros 5 caracteres de la cadena.
     frase = "Programación en Python"
-    # Tu código aquí
+    print(len(frase[5]))
 
 elif problema == 8:
     # Problema 8: Calcula la Densidad de un objeto.
     # Masa: 500kg, Volumen: 2m^3. Fórmula: d = m / v
     m = 500
     v = 2
-    # Tu código aquí
+    volumen = 2 * m^3
+    d = m / v
+    print ("La densidad es de:", d  ,"Kg/m**3")
 
 elif problema == 9:
     # Problema 9: Determina si un número es negativo.
     numero = -15
-    # Tu código aquí
+    if numero > 0:
+        print("El número es positivo")
+    elif numero < 0:
+        print("El número es negativo")
+    else:
+        print("El número es cero")
+    
+
+    
 
 elif problema == 10:
     # Problema 10: Calcula la Energía Potencial.
@@ -65,7 +89,8 @@ elif problema == 10:
     m = 5
     h = 10
     g = 9.81
-    # Tu código aquí
+    Ep = m * g * h
+    print ("La energia potencial es de:", Ep)
 
 else:
     print("Ingresa un número entre 1 y 10.")
